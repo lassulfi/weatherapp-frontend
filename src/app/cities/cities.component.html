@@ -1,0 +1,11 @@
+<h1>Suas cidades</h1>
+<div>
+    <h3>Cadastro de cidades</h3>
+    <form [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Cidade:</label>
+            <input type="text" class="form-control" formControlName="name" name="name" required>
+        </div>
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+    </form>
+</div>

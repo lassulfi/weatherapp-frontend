@@ -21,8 +21,8 @@ export class CityService {
             });
     }
 
-    findAll(): Observable<CityDTO> {
-        return this.http.get<CityDTO>(`${API_CONFIG.baseURL}/cidades`);
+    findAll(): Observable<CityDTO[]> {
+        return this.http.get<CityDTO[]>(`${API_CONFIG.baseURL}/cidades`);
     }
 
     findById(id: string): Observable<ForecastDTO> {
