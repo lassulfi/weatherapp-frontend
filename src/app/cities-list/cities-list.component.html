@@ -1,6 +1,6 @@
 <h3>Minhas cidades</h3>
 <div *ngFor="let city of cities">
     <h4>{{city.name}}</h4>
-    <button>Ver Detalhes</button>
-    <button>Excluir</button>
+    <button (click)="viewDetails(city)">Ver Detalhes</button>
+    <button (click)="delete(city)">Excluir</button>
 </div>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, OnDestroy, Input, HostListener } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CityService } from 'src/services/city.service';
+import { CitiesListComponent } from '../cities-list/cities-list.component';
 
 @Component({
   selector: 'app-cities',
@@ -13,7 +14,9 @@ export class CitiesComponent implements OnInit {
     name: ['']
   })
   
-  constructor(private formBuilder: FormBuilder, private cityService: CityService) { }
+  constructor(
+    private formBuilder: FormBuilder, 
+    private cityService: CityService) { }
 
   ngOnInit() {
   }
@@ -21,6 +24,7 @@ export class CitiesComponent implements OnInit {
   onSubmit() {
     this.cityService.insert(this.cityForm.value).subscribe(response => {
       alert('Cidade cadastrada!');
+      window.location.reload();
     }, error => {});
   }
 }

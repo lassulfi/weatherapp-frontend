@@ -8,12 +8,14 @@ import { CityService } from 'src/services/city.service';
 import { CitiesComponent } from './cities/cities.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CitiesListComponent } from './cities-list/cities-list.component';
+import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitiesComponent,
-    CitiesListComponent
+    CitiesListComponent,
+    WeatherDetailComponent
   ],
   imports: [
     BrowserModule,
