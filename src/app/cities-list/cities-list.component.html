@@ -1,6 +1,6 @@
 <h3>Minhas cidades</h3>
 <div *ngFor="let city of cities">
     <h4>{{city.name}}</h4>
-    <button (click)="viewDetails(city)">Ver Detalhes</button>
+    <button [routerLink]="['/cidade', city.id]">Ver Detalhes</button>
     <button (click)="delete(city)">Excluir</button>
 </div>

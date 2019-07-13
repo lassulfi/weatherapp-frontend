@@ -1,7 +1,6 @@
-import { Component, OnInit, Output, OnDestroy, Input, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CityService } from 'src/services/city.service';
-import { CitiesListComponent } from '../cities-list/cities-list.component';
 
 @Component({
   selector: 'app-cities',

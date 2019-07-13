@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ForecastDTO } from 'src/model/forecast.dto';
+import { CityService } from 'src/services/city.service';
 
 @Component({
   selector: 'app-weather-detail',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherDetailComponent implements OnInit {
 
-  constructor() { }
+  forecast: ForecastDTO;
+
+  constructor(private cityService: CityService) { }
 
   ngOnInit() {
+  }
+
+  fetchData() {
+    //this.cityService.findById()
   }
 
 }
