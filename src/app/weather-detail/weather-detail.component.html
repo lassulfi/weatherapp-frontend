@@ -1,3 +1,30 @@
-<h1>{{forecast.name}}</h1>
-<h3>Previsão do tempo para os proximos 5 dias</h3>
+<h1>{{forecast.cityName}}</h1>
+<h3>Previsão do tempo para os próximos 5 dias</h3>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                {{forecast.forecast[0].date}}
+                {{forecast.forecast[0].description}}
+            </td>
+            <td>
+                {{forecast.forecast[1].date}}
+                {{forecast.forecast[1].description}}
+            </td>
+            <td>
+                {{forecast.forecast[2].date}}
+                {{forecast.forecast[2].description}}
+            </td>
+            <td>
+                {{forecast.forecast[3].date}}
+                {{forecast.forecast[3].description}}
+            </td>
+            <td>
+                {{forecast.forecast[4].date}}
+                {{forecast.forecast[4].description}}
+            </td>  
+        </tr>
+    </tbody>
+</table>
+<button (click)="goToCities()">Voltar</button>
 
